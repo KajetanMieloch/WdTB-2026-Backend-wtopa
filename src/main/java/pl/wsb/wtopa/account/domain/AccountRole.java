@@ -1,4 +1,4 @@
-package pl.wsb.projekt.account.domain;
+package pl.wsb.wtopa.account.domain;
 
 public enum AccountRole {
     USER,
