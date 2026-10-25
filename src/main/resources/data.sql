@@ -9,5 +9,6 @@ insert into user_account (email, display_name, role, created_at) values
 -- konta zespołu (początek)
 insert into user_account (email, display_name, role, created_at) values
     ('s040248@student.wroclaw.merito.pl', 'Kajetan Mieloch', 'USER', current_timestamp),
-    ('s553022@student.wroclaw.merito.pl', 'Paweł Szydłowski', 'USER', current_timestamp);
+    ('s553022@student.wroclaw.merito.pl', 'Paweł Szydłowski', 'USER', current_timestamp),
+    ('s040248+majetan@student.wroclaw.merito.pl', 'Majetan Kieloch', 'USER', current_timestamp);
 -- konta zespołu (koniec)
