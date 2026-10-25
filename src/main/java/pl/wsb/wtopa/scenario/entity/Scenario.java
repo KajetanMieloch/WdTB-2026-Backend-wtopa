@@ -36,7 +36,7 @@ public class Scenario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false, length = 100)
     private String name;
 
     @Column(name = "description")
@@ -46,7 +46,7 @@ public class Scenario {
     @Column(name = "difficulty", nullable = false, length = 6)
     private Difficulty difficulty;
 
-    @Column(name = "duration+minutes")
+    @Column(name = "duration_minutes")
     private int durationMinutes;
 
     @Embedded

@@ -25,16 +25,16 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", nullable = false, length = 60),
+    @Column(name = "name", nullable = false, length = 60)
     private String name;
 
-    @Column(name = "surname", nullable = false, length = 60),
+    @Column(name = "surname", nullable = false, length = 60)
     private String surname;
 
-    @Column(name = "email", nullable = false, unique = true, length = 120),
+    @Column(name = "email", nullable = false, unique = true, length = 120)
     private String email;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "role", nullable = false, length = 20),
+    @Column(name = "role", nullable = false, length = 20)
     private Role role;
 }
