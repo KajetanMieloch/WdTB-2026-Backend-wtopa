@@ -1,7 +1,10 @@
 package pl.wsb.wtopa.scenario.entity;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -51,4 +54,12 @@ public class Scenario {
 
     @Embedded
     private Budget budget;
+
+    /** Druga strona relacji ScenarioPost.scenario: posty tworzące oś czasu tego scenariusza. */
+    @OneToMany(mappedBy = "scenario")
+    private List<ScenarioPost> posts = new ArrayList<>();
+
+    public List<ScenarioPost> getPosts() {
+        return posts;
+    }
 }

@@ -10,6 +10,10 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Embedded;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import pl.wsb.wtopa.account.domain.UserAccount;
 
 enum Role {
     USER,
@@ -37,4 +41,13 @@ public class Users {
     @Enumerated(EnumType.STRING)
     @Column(name = "role", nullable = false, length = 20)
     private Role role;
+
+    /** Konto logowania tej osoby: jedno konto na jednego użytkownika, relacja opcjonalna. */
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_account_id")
+    private UserAccount account;
+
+    public UserAccount getAccount() {
+        return account;
+    }
 }
