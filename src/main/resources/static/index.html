@@ -56,6 +56,7 @@
       <li><b>LAB 01:</b> nazwa projektu <code>wtopa</code> w repozytorium, pakiecie i klasie startowej, konta zespołu w <code>data.sql</code>, wersja z numerami indeksów, wizytówka</li>
       <li><b>LAB 03:</b> relacja wiele-do-jednego: przebieg (<code>scenario_run</code>) wskazuje scenariusz przez <code>scenario_id</code></li>
       <li><b>LAB 03 (skończony schemat):</b> nowa tabela <code>scenario_post</code> (posty na osi czasu scenariusza, wiele-do-jednego i jeden-do-wielu), <code>users</code> wskazuje konto logowania (jeden-do-jednego), a tabela łącząca <code>scenario_run_participant</code> robi wiele-do-wielu między przebiegami i uczestnikami z punktami, błędami i czasem; schemat w <code>SCHEMAT.md</code></li>
+      <li><b>LAB 03 (LAZY i repozytoria):</b> wszystkie relacje do jednego wiersza pobierane leniwie (<code>FetchType.LAZY</code>), repozytoria <code>ScenarioPostRepository.findByScenario_Name</code> i <code>ScenarioRunParticipantRepository.findByUser_Email</code> z zapytaniami przez relację</li>
     </ul>
     <p class="muted">Koncepcja w całości: <code>KONCEPCJA.md</code> w repozytorium.</p>
   </section>
